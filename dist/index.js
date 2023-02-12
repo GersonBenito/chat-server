@@ -5,6 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const server_1 = __importDefault(require("./class/server"));
 const router_1 = __importDefault(require("./routes/router"));
-const server = new server_1.default();
+const server = server_1.default.instance;
 server.app.use('/server', router_1.default);
 server.start(() => console.log(`Servidor corriendo en el puerto ${server.port}`));

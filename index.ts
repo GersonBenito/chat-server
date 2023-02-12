@@ -1,8 +1,8 @@
-import Server from './class/server';
+import ServerSocket from './class/server';
 import router from './routes/router';
 
 
-const server = new Server();
+const server = ServerSocket.instance;
 
 server.app.use('/server', router);
 
